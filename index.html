@@ -1,54 +1,53 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <script src="myscripts.js"></script>
-
-    </head>
-<body>
-<h1>Emīlija Baltaisbrence</h1>
-<h1>Vai tu būsi mana Valentīns?</h1>
-
-<img src=”sexy.jpg”>
-
-<div>
-<input id ="yes" class="styled" type="button" value="Jā" />
-<input id ="no" class="styled" type="button" value="Nē" />
-</div>
-
-<script>
-
-    function moveButtonOnHover() {
-
-        const button = document.getElementById('no');
-
-
-        const container = button.parentElement;
-
-
-        const maxLeft = container.clientWidth - button.offsetWidth;
-        const maxTop = container.clientHeight - button.offsetHeight;
-
-
-        function getRandomPosition(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .button-container {
+            position: relative; /* Ensure the container has a position */
         }
 
+        #no {
+            position: absolute; /* Set button's position to absolute */
+        }
+    </style>
+</head>
+<body>
+    <h1>Emīlija Baltaisbrence</h1>
+    <h1>Vai tu būsi mana Valentīns?</h1>
 
-        button.addEventListener('mouseover', function() {
+    <div class="image-container">
+        <img src="sexy.jpg" class="centered-and-smaller">
+    </div>
 
-            const left = getRandomPosition(0, maxLeft);
-            const top = getRandomPosition(0, maxTop);
+    <div class="button-container">
+        <a href="info.html">
+            <input id="yes" class="styled" type="button" value="Jā" />
+        </a>
+        <input id="no" class="styled" type="button" value="Nē" />
+    </div>
 
+    <script>
+        function moveButtonOnHover() {
+            const button = document.getElementById("no");
+            const container = button.parentElement;
+            const maxLeft = container.clientWidth - button.offsetWidth;
+            const maxTop = container.clientHeight - button.offsetHeight;
 
-            button.style.left = left + 'px';
-            button.style.top = top + 'px';
-        });
-    }
+            function getRandomPosition(min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
 
+            button.addEventListener('mouseover', function() {
+                const left = getRandomPosition(0, maxLeft);
+                const top = getRandomPosition(0, maxTop);
+                button.style.left = left + 'px';
+                button.style.top = top + 'px';
+            });
+        }
 
-    document.addEventListener('DOMContentLoaded', moveButtonOnHover);
-</script>
+        document.addEventListener('DOMContentLoaded', moveButtonOnHover);
+    </script>
+
 </body>
 </html>
