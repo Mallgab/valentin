@@ -1,0 +1,39 @@
+h1 {
+    font-family: Fantasy;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+body {
+    background-color: #FD8CC4;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.centered-and-smaller {
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.button-container {
+    text-align: center; /* Center the buttons horizontally */
+}
+
+.styled {
+    /* Add your button styles here */
+    /* For example: */
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px; /* Adjust the margin to add spacing between buttons */
+    cursor: pointer;
+}
